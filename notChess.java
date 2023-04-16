@@ -29,12 +29,8 @@ public class notChess implements Runnable, ActionListener {
 	 private JButton moveButton;
 	 private String buttonMove;
 	 private String textMove;
-	 private String piece;
-	 private String column1;
-	 private String column2;
 	 private int row1;
 	 private int row2;
-	 private Boolean isValid;
 	 private Boolean firstPress = true;
   	 private myButton[][] squareButton = new myButton[9][9];
 	 private myButton aButton = new myButton(0,0);
@@ -195,7 +191,7 @@ public class notChess implements Runnable, ActionListener {
     */	
 	public Boolean checkAndMove(String textMove) {
 		// assume that the move is valid
-		isValid = true;
+		Boolean isValid = true;
 		
 		// reset as if nothing has been pressed
 		firstPress = true;
@@ -207,8 +203,8 @@ public class notChess implements Runnable, ActionListener {
 		}
 		
 		// break out each of the five characters
-		piece = textMove.substring(0,1);
-		column1 = textMove.substring(1,2);
+		String piece = textMove.substring(0,1);
+		String column1 = textMove.substring(1,2);
 		
 		// make sure to catch non-numerics
 		try {
@@ -218,7 +214,7 @@ public class notChess implements Runnable, ActionListener {
 			isValid = false;
 			return isValid;
 		}	
-		column2 = textMove.substring(3,4);
+		String column2 = textMove.substring(3,4);
 		
 		// make sure to catch non-numerics
 		try {
