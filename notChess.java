@@ -20,10 +20,7 @@ import javax.swing.JTextField;
 */
 
 public class notChess implements Runnable, ActionListener {
-    /**
-     * The run method to set up the graphical user interface
-     */	
-
+ 
 	 private JLabel moveLabel;
 	 private JTextField inputBox;
 	 private JButton moveButton;
@@ -37,7 +34,9 @@ public class notChess implements Runnable, ActionListener {
 	 private final String COLUMN[] = {" ","A","B","C","D","E","F","G","H",};
 	 private final String COLSTRING = "ABCDEFGH";
 
-	 
+ 	/**
+	* The run method to set up the graphical user interface
+	*/	 
 	@Override
 	public void run() {
 		
